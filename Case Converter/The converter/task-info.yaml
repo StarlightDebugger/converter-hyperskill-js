@@ -92,9 +92,9 @@ files:
           await new ConverterTest().runTests()
       }, 30000)
     learner_created: false
-feedback_link: https://hyperskill.org/projects/193/stages/962/implement#comment
+feedback_link: https://hyperskill.org/learn/step/13999#comment
 status: Solved
 feedback:
   message: Congratulations!
   time: "Wed, 10 Apr 2024 02:48:20 UTC"
-record: -1
+record: 1
