@@ -3,7 +3,7 @@ hyperskill_project:
   ide_files: https://cogniterra.org/media/attachments/lesson/25639/additional_files.json
   is_template_based: false
   use_ide: true
-update_date: "Sun, 28 Apr 2024 03:59:54 UTC"
+update_date: "Thu, 02 May 2024 01:06:12 UTC"
 stages:
   - id: 962
     step: 13999
@@ -13,7 +13,7 @@ stages:
     is_completed: true
   - id: 964
     step: 14001
-    is_completed: false
+    is_completed: true
 topics:
   0:
     - title: Block-level elements

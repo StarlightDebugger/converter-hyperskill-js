@@ -188,6 +188,76 @@ files:
       }, 30000)
     
     learner_created: false
+  - name: src/app.js
+    visible: true
+    text: |
+      const textInput = document.getElementsByTagName("TEXTAREA")[0];
+      const upperCaseButton = document.getElementById("upper-case");
+      const lowerCaseButton = document.getElementById("lower-case");
+      const properCaseButton = document.getElementById("proper-case");
+      const sentenceCaseButton = document.getElementById("sentence-case");
+      
+      upperCaseButton.addEventListener("click", (e) => {
+          textInput.value = textInput.value.toUpperCase();
+      });
+      
+      lowerCaseButton.addEventListener("click", (e) => {
+          textInput.value = textInput.value.toLowerCase();
+      });
+      
+      properCaseButton.addEventListener("click", (e) => {
+          const words = textInput.value.split(" ");
+          const wordArray = [];
+          for(let word of words) {
+              word = word.toLowerCase();
+              wordArray.push(word.charAt(0).toUpperCase() + word.slice(1));
+          }
+          textInput.value = wordArray.join(" ");
+      });
+      
+      sentenceCaseButton.addEventListener("click", (e) => {
+          const inputText = textInput.value;
+          const results = inputText.match( /[^\.!\?]+[\.!\?]+/g );
+          const sentenceArray = [];
+          for(let result of results) {
+              result = result.toLowerCase().trim();
+              sentenceArray.push(result.charAt(0).toUpperCase() + result.slice(1));
+          }
+          textInput.value = sentenceArray.join(" ");
+      });
+    learner_created: true
+  - name: src/styles.css
+    visible: true
+    text: |-
+      * {
+          box-sizing: border-box;
+          margin: 0;
+          padding: 0;
+      }
+      
+      body {
+          background-color: rgb(201, 199, 199);
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          max-width: 1400px;
+          align-items: center;
+      }
+      
+      button {
+          min-width: 150px;
+          min-height: 75px;
+      }
+      
+      textarea {
+          min-width: 750px;
+          min-height: 500px;
+      }
+    learner_created: true
 feedback_link: https://hyperskill.org/learn/step/14001#comment
-status: Unchecked
+status: Solved
+feedback:
+  message: Well done! You've finished the project. Select a new project on <a href="https://hyperskill.org/projects">Hyperskill</a>
+    to continue learning.
+  time: "Thu, 02 May 2024 02:41:43 UTC"
 record: -1
